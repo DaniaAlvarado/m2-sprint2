@@ -1,0 +1,76 @@
+*{
+    font-family: sans-serif;
+}
+main{
+    display: flex;
+    width: 100%;
+    .vuelos{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+    }
+}
+.vuelo{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width:100%;
+    background-color: rgb(244, 242, 242);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    gap: 20px;
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        h5{
+            font-size: 20px;
+        }
+        button{
+            background-color: transparent;
+            padding: 8px;
+            border: 3px solid rgb(161, 43, 136);
+            border-radius: 20px;
+            color: rgb(161, 43, 136);
+        }
+    }
+    &__fecha{
+        span{
+            font-size: 18px;
+            color: black;
+        }
+        div{
+            font-size: 12px;
+        }
+    }
+    &__option{
+        display: flex;
+        gap: 15px;
+        background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    &__dates{
+        display: flex;
+        margin-top: 20px;
+        gap: 20px;
+        font-size: 20px;
+    }
+    &__equipaje{
+        display: flex;
+        gap: 15px;
+        button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px;
+            padding: 10px;
+            font-size: 12px;
+            background-color: transparent;
+            border: 1px solid rgb(209, 208, 208);
+            &:hover{
+                cursor: pointer;
+                background-color: rgb(161, 43, 136);
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    font-family: sans-serif;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 20px;
+        background-color: rgb(235, 234, 234);
+        padding: 20px;
+        border-radius: 20px;
+        z-index: 1;
+        transform: translateX(100px);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        span{
+            font-size: 12px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            nav{
+                display: flex;
+                background-color: white;
+                gap: 15px;
+                padding: 5px;
+                width: 60%;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    padding: 4px;
+                    border-radius: 7px;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgb(161, 43, 136);
+                        color: white;
+                    }
+                }
+            }
+            .flights{
+                display: flex;
+                width: 100%;
+                gap: 10px;
+                input{
+                   width: 50%; 
+                   height: 70px;
+                }
+                select{
+                    width: 50%;
+                    height: 70px;
+                    text-align: center;
+                }
+            }
+            .dates{
+                display: flex;
+                width: 100%;
+                gap: 10px;
+                input{
+                    width: 50%;
+                    height: 35px;
+                }
+            }
+            .people{
+                display: flex;
+                width: 100%;
+                gap: 10px;
+                .pasajeros{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    height: 35px;
+                    background-color: white;
+                    border: 1px solid rgb(160, 160, 160);
+                    span{
+                        font-size: 10px;
+                        line-height: 3px;
+                    }
+                }
+                .contador{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    margin-top: 40px;
+                    background-color: white;
+                    width: 180px;
+                    padding: 10px;
+                    gap: 10px;
+                    border-radius: 10px;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    &__item{
+                        display: flex;
+                        gap: 10px;
+                        button{
+                            width: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                input{
+                    width: 50%;
+                    height: 35px;
+                    font-size: 10px;
+                }
+            }
+            .btnSearch{
+                width: 100%;
+                height: 40px;
+                margin: 0 auto;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(161, 43, 136);
+                color: white;
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+    figure{
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            transform: translateX(-100px);
+        }
+    }
+}
+
+@media (max-width:875px){
+    .header{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px;
+        width: 100%;
+        align-items: center;
+        &__form{
+            width: 90%;
+            z-index: 1;
+            transform: translatex(0);
+           transform: translateY(-160px);
+           form {
+            .flights{
+                display: flex;
+                flex-direction: column;
+                input{
+                    width: 100%; 
+                 }
+                 select{
+                     width: 100%;
+                 }
+            }
+            .dates{
+                display: flex;
+                flex-direction: column;
+                input{
+                    width: 100%;
+                }
+            }
+            .people{
+                display: flex;
+                flex-direction: column;
+                select{
+                    width: 100%;
+                }
+                input{
+                    width: 100%;
+                }
+            }
+            }
+        }
+        figure{
+            img{
+                width: 100%;
+                height: 50%;
+                border-radius: 0;
+                transform: translateX(0);
+            }
+        }
+    }
+}
