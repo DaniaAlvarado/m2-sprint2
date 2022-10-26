@@ -38,7 +38,6 @@ const FlightBack = () => {
                             <article className="vuelo__dates">
                                 <nav>{element.time}</nav>
                                 <div>
-                                    <div>1h 57 min</div>
                                     <span>Sin escalas</span>
                                 </div>
                             </article>
@@ -47,19 +46,19 @@ const FlightBack = () => {
                                     <img src={bag} alt="brief" />
                                     <span>1 objeto personal</span>
                                     <img src={dolar} alt="dollar" />
-                                    <div>5.48 MXN</div>
+                                    <div>500</div>
                                 </button>
                                 <button>
                                     <img src={bag} alt="brief" />
                                     <span>Equipaje de mano</span>
                                     <img src={dolar} alt="dollar" />
-                                    <div>1,084 MXN</div>
+                                    <div>1000</div>
                                 </button>
                                 <button>
                                     <img src={bag} alt="brief" />
                                     <span>Equipaje 25kg</span>
                                     <img src={dolar} alt="dollar" />
-                                    <div>1,945 MXN</div>
+                                    <div>1900</div>
                                 </button>
                             </article>
                             </section>

@@ -1,29 +1,35 @@
-*{
+* {
     font-family: sans-serif;
 }
-main{
+
+main {
     display: flex;
     width: 100%;
-    .asientos{
+
+    .asientos {
         display: flex;
         flex-direction: column;
         width: 75%;
     }
 }
-.asiento{
+
+.asiento {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    width:100%;
+    width: 100%;
     background-color: rgb(244, 242, 242);
     gap: 20px;
-    &__title{
+
+    &__title {
         display: flex;
         justify-content: space-between;
-        h5{
+
+        h5 {
             font-size: 20px;
         }
-        button{
+
+        button {
             background-color: transparent;
             padding: 8px;
             border: 3px solid rgb(161, 43, 136);
@@ -31,32 +37,47 @@ main{
             color: rgb(161, 43, 136);
         }
     }
-    &__option{
+
+    &__option {
         display: flex;
-        gap: 300px;
-        article{
+        gap: 200px;
+
+        article {
             display: flex;
-            gap: 30px;
+            gap: 10px;
             align-items: center;
-            div{
-                width: 30px;
-                height: 30px;
+
+            div {
+                width: 50px;
+                height: 50px;
                 background-color: white;
             }
         }
     }
-    &__columnas{
+
+    &__columnas {
         display: flex;
-        gap: 300px;
-        article{
+        gap: 200px;
+
+        article {
             display: flex;
-            gap: 30px;
-            button{
-                width: 30px;
-                height: 30px;
-                background-color: rgb(175, 175, 175);
+            gap: 10px;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                button {
+                    width: 50px;
+                    height: 50px;
+                    border: none;
+                    background-color: rgb(199, 198, 198);
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgb(161, 43, 136) ;
+                    }
+                }
             }
         }
     }
-    
+
 }

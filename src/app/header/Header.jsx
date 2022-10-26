@@ -45,9 +45,7 @@ const Header = () => {
         } else {
             console.log('errorrrrrr')
             Swal.fire(
-                'upps',
                 'No se encontraron vuelos!',
-                'error'
             )
         }
     }
@@ -65,7 +63,7 @@ const Header = () => {
             console.log("se puede continuar");
             await filterFligth(dataForm)
         } else {
-            console.log("llene los datos porfavor");
+            console.log("llene los datos por favor");
         }
     };
 
@@ -80,7 +78,12 @@ const Header = () => {
                     <form onSubmit={handleSubmit}>
                         <Button />
                         <div className="flights" >
-                            <input type="text" placeholder="Origen" name='salida' onChange={handleChangeOption} />
+                            <select name="salida" onChange={handleChangeOption}>
+                                <option value="">--</option>
+                                <option value="Medellin">Medellin</option>
+                                <option value="Cali">Cali</option>
+                                <option value="Bogota">Bogota</option>
+                            </select>
                             <select name="destino" onChange={handleChangeOption}>
                                 <option value="">--</option>
                                 <option value="Medellin">Medellin</option>

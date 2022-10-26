@@ -74,3 +74,38 @@ main{
         }
     }
 }
+.book{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: rgb(244, 242, 242);
+    padding: 10px;
+    gap: 20px;
+    &__flights{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+        gap: 10px;
+        background-color: white;
+    }
+    &__pasajeros{
+        display: flex;
+    }
+    &__destino{
+        display: flex;
+        gap: 10px;
+    }
+    &__hora{
+        display: flex;
+        gap: 10px;
+    }
+    button{
+        width: 90%;
+        border-radius: 15px;
+        padding: 8px;
+        border: none;
+        background-color: rgb(161, 43, 136);
+        color: white;
+    }
+}
