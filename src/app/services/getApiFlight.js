@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL_API = 'https://m2-sprin2back-production.up.railway.app/vuelos';
+const URL_API = 'https://m2-sprin2back-production.up.railway.app/vuelos' ;
 export const searchFligths = async (flight = {}) => {
   let urlSearch = `${URL_API}?`;
   for (const key in flight) {

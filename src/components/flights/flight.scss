@@ -88,6 +88,10 @@ main{
         padding: 10px;
         gap: 10px;
         background-color: white;
+        div{
+            display: flex;
+            gap: 20px;
+        }
     }
     &__pasajeros{
         display: flex;

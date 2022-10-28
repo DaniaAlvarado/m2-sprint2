@@ -1,4 +1,4 @@
-import React,  { useState } from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import './header.scss';
 import Image from "./Image";
@@ -18,10 +18,12 @@ const Header = () => {
         baby: 0,
     });
 
-    const handleOperation = (name, operation) =>{
-        setOper((prev) => {return {
-            ...prev, [name]: operation === 'i' ? oper[name] + 1 : oper[name] -1,
-        }})
+    const handleOperation = (name, operation) => {
+        setOper((prev) => {
+            return {
+                ...prev, [name]: operation === 'i' ? oper[name] + 1 : oper[name] - 1,
+            }
+        })
     }
 
     const navigate = useNavigate();
@@ -83,12 +85,16 @@ const Header = () => {
                                 <option value="Medellin">Medellin</option>
                                 <option value="Cali">Cali</option>
                                 <option value="Bogota">Bogota</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Monteria">Monteria</option>
                             </select>
                             <select name="destino" onChange={handleChangeOption}>
                                 <option value="">--</option>
                                 <option value="Medellin">Medellin</option>
                                 <option value="Cali">Cali</option>
                                 <option value="Bogota">Bogota</option>
+                                <option value="Bucaramanga">Bucaramanga</option>
+                                <option value="Monteria">Monteria</option>
                             </select>
                         </div>
                         <div className="dates">
@@ -96,32 +102,32 @@ const Header = () => {
                             <input type="date" aria-label="Regreso" name="dateRegreso" onChange={handleChangeOption} />
                         </div>
                         <div className="people">
-                <nav onClick={() =>setOpenOption(!openOption)} className="pasajeros">
-                    <span>Pasajeros</span>
-                    <span>{`${oper.adult} Adulto - ${oper.children} Niños - ${oper.baby} Bebès`}</span>
-                </nav>
-                {openOption &&<  div className="contador" name="people" >
-                    <div className="contador__item" >
-                        <span>Adulto</span>
-                        <span disabled={oper.adult <= 1} onClick={() => {handleOperation('adult', 'd')}}>-</span>
-                        <span>{oper.adult}</span>
-                        <span onClick={() => {handleOperation('adult', 'i')}}>+</span>
-                    </div>
-                    <div className="contador__item" >
-                        <span>Niños</span>
-                        <span onClick={() => {handleOperation('children', 'd')}}>-</span>
-                        <span>{oper.children}</span>
-                        <span onClick={() => {handleOperation('children', 'i')}}>+</span>
-                    </div>
-                    <div className="contador__item" >
-                        <span>Bebès</span>
-                        <span onClick={() => {handleOperation('baby', 'd')}}>-</span>
-                        <span>{oper.baby}</span>
-                        <span onClick={() => {handleOperation('baby', 'i')}}>+</span>
-                    </div>
-                </div>}
-                <input type="text" placeholder="¿Tienes un codigo de promocion?"/>
-            </div>
+                            <nav onClick={() => setOpenOption(!openOption)} className="pasajeros">
+                                <span>Pasajeros</span>
+                                <span>{`${oper.adult} Adulto - ${oper.children} Niños - ${oper.baby} Bebès`}</span>
+                            </nav>
+                            {openOption && <  div className="contador" name="people" >
+                                <div className="contador__item" >
+                                    <span>Adulto</span>
+                                    <span disabled={oper.adult <= 1} onClick={() => { handleOperation('adult', 'd') }}>-</span>
+                                    <span>{oper.adult}</span>
+                                    <span onClick={() => { handleOperation('adult', 'i') }}>+</span>
+                                </div>
+                                <div className="contador__item" >
+                                    <span>Niños</span>
+                                    <span onClick={() => { handleOperation('children', 'd') }}>-</span>
+                                    <span>{oper.children}</span>
+                                    <span onClick={() => { handleOperation('children', 'i') }}>+</span>
+                                </div>
+                                <div className="contador__item" >
+                                    <span>Bebès</span>
+                                    <span onClick={() => { handleOperation('baby', 'd') }}>-</span>
+                                    <span>{oper.baby}</span>
+                                    <span onClick={() => { handleOperation('baby', 'i') }}>+</span>
+                                </div>
+                            </div>}
+                            <input type="text" placeholder="¿Tienes un codigo de promocion?" />
+                        </div>
                         <Search />
                     </form>
                 </article>
